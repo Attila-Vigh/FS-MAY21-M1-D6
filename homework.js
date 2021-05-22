@@ -47,11 +47,22 @@ const testExerciseD = () => {
     console.log("me:", me); // =>
 }
 
+/* Ex.E 
+    Programmatically remove the age property from the previously create object.
+*/
+
+delete me.age
+
+const testExerciseE = () => {
+    console.log("me:", me); // =>
+}
+
 const testAllExercise = () => {
 
     // testExerciseA()
     // testExerciseB()
     // testExerciseC()
-    testExerciseD()
+    // testExerciseD()
+    testExerciseE() 
 };
 testAllExercise()
