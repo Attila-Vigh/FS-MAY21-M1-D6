@@ -80,14 +80,29 @@ me.skills.pop()
 const testExerciseG = () => {
     console.log("me:", me); // =>
 }
-const testAllExercise = () => {
 
-    // testExerciseA()
-    // testExerciseB()
-    // testExerciseC()
-    // testExerciseD()
-    // testExerciseE() 
-    // testExerciseF() 
+// JS Functions
+/* Ex.1
+    Write a function called "dice"; it should randomize an integer number between 1 and 6.
+*/
+
+const dice = () => Math.floor(Math.random() * 5) + 1;
+
+const testExercise1 = () => {
+    console.log("dice:", dice()); // =>
+}
+const testAllExercise = () => {
+/**
+    testExerciseA()
+    testExerciseB()
+    testExerciseC()
+    testExerciseD()
+    testExerciseE() 
+    testExerciseF() 
     testExerciseG() 
+ */
+    testExercise1() 
 };
+
+
 testAllExercise()
