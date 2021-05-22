@@ -110,6 +110,18 @@ const testExercise2 = (testing) => {
     console.log("whoIsBigger:", testing("2", 2)); // => ! This is interesting
     console.log("whoIsBigger:", testing("1", 2)); // => ! This is interesting
 }
+/* Ex.3
+    Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
+    Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
+*/
+
+const splitMe = ( string ) => string.split(" ")
+
+const testExercise3 = (testing) => {
+
+    console.log( testing("I love coding") ); // =>
+    console.log( testing("I am from faraway.") ); // =>
+}
 const testAllExercise = () => {
     /**
         testExerciseA()
@@ -120,9 +132,10 @@ const testAllExercise = () => {
         testExerciseF() 
         testExerciseG() 
         testExercise1() 
+        testExercise2(whoIsBiggerInsideString) 
+        testExercise3(whoIsBigger) 
         */
-       testExercise2(whoIsBiggerInsideString) 
-       testExercise2(whoIsBigger) 
+       testExercise3(splitMe) 
 };
 
 
