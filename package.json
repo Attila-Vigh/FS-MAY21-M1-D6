@@ -1,0 +1,22 @@
+{
+  "name": "m1-d6-homework",
+  "version": "1.0.0",
+  "description": "Homework module 1 day 6",
+  "main": "homework.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Attila-Vigh/M1-D6-Homework.git"
+  },
+  "author": "Attila Vigh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Attila-Vigh/M1-D6-Homework/issues"
+  },
+  "homepage": "https://github.com/Attila-Vigh/M1-D6-Homework#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
