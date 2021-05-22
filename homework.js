@@ -122,6 +122,18 @@ const testExercise3 = (testing) => {
     console.log( testing("I love coding") ); // =>
     console.log( testing("I am from faraway.") ); // =>
 }
+/* Ex.4
+    Write a function called "deleteOne" which receives a string and a boolean as parameters. 
+    If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
+*/
+
+const deleteOne = ( string, bool ) =>  bool === true ? string.slice(1) : string.substr(0, string.length - 1) ;
+
+const testExercise4 = ( testing ) => {
+
+    console.log( testing("I love coding", true) ); // =>
+    console.log( testing("I am from faraway", false) ); // =>
+}
 const testAllExercise = () => {
     /**
         testExerciseA()
@@ -133,9 +145,10 @@ const testAllExercise = () => {
         testExerciseG() 
         testExercise1() 
         testExercise2(whoIsBiggerInsideString) 
-        testExercise3(whoIsBigger) 
+        testExercise2(whoIsBigger) 
+        testExercise3(splitMe) 
         */
-       testExercise3(splitMe) 
+       testExercise4(deleteOne) 
 };
 
 
