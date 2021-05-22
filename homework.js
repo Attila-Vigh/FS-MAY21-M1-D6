@@ -71,7 +71,15 @@ me.skills =
 const testExerciseF = () => {
     console.log("me:", me); // =>
 }
+/* Ex.G 
+   Programmatically remove the last skill from the "skills" array inside the "me" object.
+*/
 
+me.skills.pop()
+
+const testExerciseG = () => {
+    console.log("me:", me); // =>
+}
 const testAllExercise = () => {
 
     // testExerciseA()
@@ -79,6 +87,7 @@ const testAllExercise = () => {
     // testExerciseC()
     // testExerciseD()
     // testExerciseE() 
-    testExerciseF() 
+    // testExerciseF() 
+    testExerciseG() 
 };
 testAllExercise()
