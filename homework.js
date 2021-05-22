@@ -56,6 +56,21 @@ delete me.age
 const testExerciseE = () => {
     console.log("me:", me); // =>
 }
+/* Ex.F 
+   Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
+*/
+
+me.skills = 
+    [
+        "html",
+        "css",
+        "JavaScript",
+        "Git",
+    ]
+
+const testExerciseF = () => {
+    console.log("me:", me); // =>
+}
 
 const testAllExercise = () => {
 
@@ -63,6 +78,7 @@ const testAllExercise = () => {
     // testExerciseB()
     // testExerciseC()
     // testExerciseD()
-    testExerciseE() 
+    // testExerciseE() 
+    testExerciseF() 
 };
 testAllExercise()
