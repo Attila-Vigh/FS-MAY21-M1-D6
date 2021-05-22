@@ -91,17 +91,38 @@ const dice = () => Math.floor(Math.random() * 5) + 1;
 const testExercise1 = () => {
     console.log("dice:", dice()); // =>
 }
+/* Ex.2 
+    Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
+*/
+
+const whoIsBiggerInsideString = (a,b) => a>b ? `${a} is bigger than ${b}` : b>a ? `${b} is bigger than ${a}` : `${a} and ${b} are equal.`
+const whoIsBigger             = (a,b) => a>b ? a : b>a ? b : `${a} and ${b} are equal.`
+
+const testExercise2 = (testing) => {
+    console.log("whoIsBigger:", testing(2, 1)); // =>
+    console.log("whoIsBigger:", testing(1, 2)); // =>
+    console.log("whoIsBigger:", testing(0, 2)); // =>
+    console.log("whoIsBigger:", testing(1, 0)); // =>
+    console.log("whoIsBigger:", testing(-1, 2)); // =>
+    console.log("whoIsBigger:", testing(2, 2)); // =>
+    console.log("whoIsBigger:", testing(1.2, 0.5)); // =>
+    console.log("whoIsBigger:", testing(2, 2.2)); // =>
+    console.log("whoIsBigger:", testing("2", 2)); // => ! This is interesting
+    console.log("whoIsBigger:", testing("1", 2)); // => ! This is interesting
+}
 const testAllExercise = () => {
-/**
-    testExerciseA()
-    testExerciseB()
-    testExerciseC()
-    testExerciseD()
-    testExerciseE() 
-    testExerciseF() 
-    testExerciseG() 
- */
-    testExercise1() 
+    /**
+        testExerciseA()
+        testExerciseB()
+        testExerciseC()
+        testExerciseD()
+        testExerciseE() 
+        testExerciseF() 
+        testExerciseG() 
+        testExercise1() 
+        */
+       testExercise2(whoIsBiggerInsideString) 
+       testExercise2(whoIsBigger) 
 };
 
 
