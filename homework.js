@@ -32,10 +32,26 @@ const testExerciseC = () => {
     console.log("random:", random); // =>
 }
 
+/* Ex.D
+    Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
+*/
+
+let me = 
+{
+    name: "Michel", 
+    surname: "Nostradamus", 
+    age: 518
+}
+
+const testExerciseD = () => {
+    console.log("me:", me); // =>
+}
+
 const testAllExercise = () => {
 
     // testExerciseA()
     // testExerciseB()
-    testExerciseC()
+    // testExerciseC()
+    testExerciseD()
 };
 testAllExercise()
