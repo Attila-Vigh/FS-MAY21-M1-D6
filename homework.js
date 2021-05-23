@@ -243,6 +243,26 @@ const testExercise9 = ( testing ) => {
     console.log( testing( 23, 6, 2020 ) ); // =>
 
 }
+/* Ex.10
+   Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
+*/
+const isTodayMyBirthday = ( date, month, year ) => {
+
+    let d = new Date();
+    if( date === d.getDate() &&  month === 1 + d.getMonth() )
+        return true
+    else
+        return false
+}
+
+const testExercise10 = ( testing ) => {
+
+    let d = new Date()
+    console.log( testing( d.getDate(), d.getMonth() + 1 ) ); // => true
+    console.log( testing( 24, 5 )                         ); // => false
+    console.log( testing( 23, 5 )                         ); // => true
+    console.log( testing( 23, 6 )                         ); // => false
+}
 
 const testAllExercise = () => {
     /**
@@ -261,8 +281,9 @@ const testAllExercise = () => {
         testExercise5(onlyLetters) 
         testExercise7(whatDayIsIt) 
         testExercise8(rollTheDices) 
+        testExercise9(howManyDays)
     */
-    testExercise9(howManyDays)
+    testExercise10(isTodayMyBirthday)
 };
 
 testAllExercise()
