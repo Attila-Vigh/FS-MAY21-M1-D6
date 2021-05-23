@@ -13,6 +13,7 @@ const testExerciseA = () => {
     
     console.log(test);
 }
+// testExerciseA()
 
 /* Ex.B
     Create a variable called "sum" and assign to it the result of the sum between 10 and 20.
@@ -25,6 +26,7 @@ const testExerciseB = () => {
 
     console.log("sum:", sum); // => 30
 }
+// testExerciseB()
 
 /* Ex.C 
     Create a variable called "random" and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
@@ -37,28 +39,29 @@ const testExerciseC = () => {
 
     console.log("random:", random); // =>
 }
+// testExerciseC()
 
 /* Ex.D
     Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 */
 
 let me = 
-{
-    name: "Michel", 
-    surname: "Nostradamus", 
-    age: 518
-}
+    {
+        name: "Michel", 
+        surname: "Nostradamus", 
+        age: 518
+    }
 
 const testExerciseD = () => {
     console.log("\n----------------< TEST ex:  >-----------------\n");
 
     console.log("me:", me); // =>
 }
+// testExerciseD()
 
 /* Ex.E 
     Programmatically remove the age property from the previously create object.
 */
-
 delete me.age
 
 const testExerciseE = () => {
@@ -66,6 +69,8 @@ const testExerciseE = () => {
 
     console.log("me:", me); // =>
 }
+// testExerciseE() 
+
 /* Ex.F 
    Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
 */
@@ -83,6 +88,8 @@ const testExerciseF = () => {
 
     console.log("me:", me); // =>
 }
+// testExerciseF() 
+
 /* Ex.G 
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
@@ -94,19 +101,23 @@ const testExerciseG = () => {
 
     console.log("me:", me); // =>
 }
+// testExerciseG() 
+
 
 // JS Functions
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
 
-const dice = () => Math.floor(Math.random() * 5) + 1;
+const dice = () => Math.floor(Math.random() * 6) + 1;
 
 const testExercise1 = () => {
     console.log("\n----------------< TEST ex: 1 >-----------------\n");
 
     console.log("dice:", dice()); // =>
 }
+// testExercise1() 
+
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
@@ -128,6 +139,9 @@ const testExercise2 = (testing) => {
     console.log("whoIsBigger:", testing("2", 2)); // => ! This is interesting
     console.log("whoIsBigger:", testing("1", 2)); // => ! This is interesting
 }
+// testExercise2(whoIsBiggerInsideString) 
+// testExercise2(whoIsBigger) 
+
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
@@ -138,10 +152,11 @@ const splitMe = ( string ) => string.split(" ")
 const testExercise3 = (testing) => {
     console.log("\n----------------< TEST ex: 3 >-----------------\n");
 
-
     console.log( testing("I love coding") ); // =>
     console.log( testing("I am from faraway.") ); // =>
 }
+// testExercise3(splitMe) 
+
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. 
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
@@ -152,10 +167,11 @@ const deleteOne = ( string, bool ) =>  bool === true ? string.slice(1) : string.
 const testExercise4 = ( testing ) => {
     console.log("\n----------------< TEST ex: 4 >-----------------\n");
 
-
     console.log( testing("I love coding", true) ); // =>
     console.log( testing("I am from faraway", false) ); // =>
 }
+// testExercise4(deleteOne) 
+
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
@@ -176,10 +192,11 @@ const onlyLetters = ( string ) =>  {
 const testExercise5 = ( testing ) => {
     console.log("\n----------------< TEST ex: 5 >-----------------\n");
 
-
     console.log( testing("4 kids are playing 4 games coding") ); // =>
     console.log( testing("I have 4 dogs") ); // =>
 }
+// testExercise5(onlyLetters) 
+
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
@@ -188,11 +205,12 @@ const isThisAnEmail = ( string ) =>  string.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}
 
 const testExercise6 = ( testing ) => {
     console.log("\n----------------< TEST ex: 6 >-----------------\n");
-
     
-    console.log( testing("this.is@anemail.com") ); // =>
-    console.log( testing("I have 4 dogs") ); // =>
+    console.log( testing("this.is@anemail.com") ); // => true
+    console.log( testing("I have 4 dogs"      ) ); // => false
 }
+// testExercise6(isThisAnEmail)
+
 /* Ex.7
     Write a function called "whatDayIsIt" that should return the current day of the week.
 */
@@ -217,6 +235,8 @@ const testExercise7 = ( testing ) => {
 
     console.log( testing() ); // =>
 }
+// testExercise7(whatDayIsIt) 
+
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
@@ -243,7 +263,6 @@ const rollTheDices = ( numbers ) => {
 const testExercise8 = ( testing ) => {
     console.log("\n----------------< TEST ex: 8 >-----------------\n");
 
-
     console.log( testing(1) ); // =>
     console.log( testing(2) ); // =>
     console.log( testing(3) ); // =>
@@ -251,6 +270,8 @@ const testExercise8 = ( testing ) => {
     console.log( testing(5) ); // =>
     console.log( testing(6) ); // =>
 }
+// testExercise8(rollTheDices) 
+
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
@@ -275,6 +296,8 @@ const testExercise9 = ( testing ) => {
     console.log( testing( 23, 6, 2020 ) ); // =>
 
 }
+// testExercise9(howManyDays)
+
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
@@ -286,7 +309,6 @@ const isTodayMyBirthday = ( date, month, year ) => {
     else
         return false
 }
-
 const testExercise10 = ( testing ) => {
     console.log("\n----------------< TEST ex: 10 >-----------------\n");
 
@@ -297,6 +319,7 @@ const testExercise10 = ( testing ) => {
     console.log( testing( 23, 5 )                         ); // => true
     console.log( testing( 23, 6 )                         ); // => false
 }
+// testExercise10(isTodayMyBirthday)
 
 // JS Arrays // Objs
 // NOTE: movies array is defined inside data/movies.js and imported at the top of this file!
@@ -323,9 +346,10 @@ const deleteProp = ( object, property ) => {
 const testExercise11 = ( testing ) => {
     console.log("\n----------------< TEST ex: 11 >-----------------\n");
 
-
     console.log( testing( movie, "Title") ); // 
 }
+testExercise11(deleteProp)
+
 /* Ex.12 
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
@@ -341,6 +365,8 @@ const testExercise12 = ( testing ) => {
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
+// testExercise12(olderMovie)
+
 /* Ex.13
     Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
 */
@@ -353,6 +379,8 @@ const testExercise13 = ( testing ) => {
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
+// testExercise13(countMovies)
+
 /* Ex.14
     Write a function called "   onlyTheTitles" which creates an array with just the    titles of the movies provided in the array at the end of the file.
 */
@@ -370,6 +398,8 @@ const testExercise14 = ( testing ) => {
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
+// testExercise14(onlyTheTitles)
+
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
@@ -388,6 +418,8 @@ const testExercise15 = ( testing ) => {
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
+// testExercise15(onlyInThisMillennium)
+
 /* Ex.16 
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
 */
@@ -406,6 +438,8 @@ const testExercise16 = ( testing ) => {
     console.log( testing( "tt1731697" ) ); // => The Lords of Salem
     console.log( testing( "tt0167261" ) ); // => The Lord of the Rings: The Two Towers
 }
+// testExercise16(getMovieById)
+
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
 */
@@ -424,6 +458,8 @@ const testExercise17 = ( testing ) => {
 
     console.log( testing( movies ) ); // => 
 }
+// testExercise17(sumAllTheYears)
+
 /* Ex.18
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the  title.
 */
@@ -445,7 +481,9 @@ const testExercise18 = ( testing ) => {
     console.log( testing( "Tarzan" ) ); // => 
     console.log( testing( "Dogtown" ) ); // => 
 }
-    
+
+//  testExercise18(searchByTitle)
+
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
     this object should contain an array called "match", made by all the movies which contain the given string in the title,
@@ -472,6 +510,8 @@ const testExercise19 = ( testing ) => {
     console.log( testing( "Tarzan" ) ); // => 
     console.log( testing( "Dogtown" ) ); // => 
 }
+// testExercise19(searchAndDivide)
+
 /* Ex.20
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
 */
@@ -494,7 +534,11 @@ const testExercise20 = ( testing ) => {
     // console.log( testing( movies, 2 ) ); // => 
     // console.log( testing( movies, make a mistake ) ); // => 
 }
+// testExercise20(removeIndex)
+
+
 // [EXTRAS] JS Advanced
+
 
 /* Ex.21
   Create a function called "halfTree" which receives a number as a parameter and builds an "*" half tree with the given height.
@@ -534,6 +578,7 @@ const testExercise21 = ( testing ) => {
     console.log( testing( 4 ) ); // =>  
     console.log( testing( 5 ) ); // =>  
 }
+// testExercise21(halfTree)
 
 /* Ex.22 
   Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
@@ -576,6 +621,8 @@ const testExercise22 = ( testing ) => {
     console.log( testing( 4 ) ); // =>  
     console.log( testing( 5 ) ); // =>  
 }
+// testExercise22(tree)
+
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
@@ -609,6 +656,8 @@ const testExercise23 = ( testing ) => {
     console.log( "is prime 117, false ===", testing( 117) ); // =>  
     console.log( "is prime 127, true ===", testing( 127 ) ); // =>  
 }
+// testExercise23(isItPrime)
+
 
 const testAllExercise = () => {
    /**
@@ -642,7 +691,7 @@ const testAllExercise = () => {
         testExercise21(halfTree)
         testExercise22(tree)
     */
-    testExercise23(isItPrime)
+    // testExercise23(isItPrime)
 };
 
 testAllExercise()
