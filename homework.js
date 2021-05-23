@@ -313,6 +313,21 @@ const testExercise13 = ( testing ) => {
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
+/* Ex.14
+    Write a function called "   onlyTheTitles" which creates an array with just the    titles of the movies provided in the array at the end of the file.
+*/
+const onlyTheTitles = ( movies ) => {
+    const movieTitles = []
+    for (const movie of movies) {
+        movieTitles.push(movie.Title)
+    }
+    return movieTitles
+}
+
+const testExercise14 = ( testing ) => {
+
+    console.log( testing( movies) ); // => Lord of the Flies
+}
 
 const testAllExercise = () => {
     /**
@@ -335,8 +350,9 @@ const testAllExercise = () => {
         testExercise10(isTodayMyBirthday)
         testExercise11(deleteProp)
         testExercise12(olderMovie)
+        testExercise13(countMovies)
     */
-    testExercise13(countMovies)
+    testExercise14(onlyTheTitles)
 };
 
 testAllExercise()
