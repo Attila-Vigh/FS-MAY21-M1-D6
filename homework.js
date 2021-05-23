@@ -264,6 +264,33 @@ const testExercise10 = ( testing ) => {
     console.log( testing( 23, 6 )                         ); // => false
 }
 
+// JS Arrays // Objs
+// NOTE: movies array is defined inside data/movies.js and imported at the top of this file!
+
+/* Ex.11
+   Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
+*/
+
+const movie =
+{
+    Title : "The Lord of the Rings: The Fellowship of the Ring",
+    Year  : "2001",
+    imdbID: "tt0120737",
+    Type  : "movie",
+    Poster:
+        "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+}
+
+const deleteProp = ( object, property ) => {
+    delete object[property]; 
+    return object 
+}
+
+const testExercise11 = ( testing ) => {
+
+    console.log( testing( movie, "Title") ); // 
+}
+
 const testAllExercise = () => {
     /**
         testExerciseA()
@@ -282,8 +309,9 @@ const testAllExercise = () => {
         testExercise7(whatDayIsIt) 
         testExercise8(rollTheDices) 
         testExercise9(howManyDays)
+        testExercise10(isTodayMyBirthday)
     */
-    testExercise10(isTodayMyBirthday)
+    testExercise11(deleteProp)
 };
 
 testAllExercise()
