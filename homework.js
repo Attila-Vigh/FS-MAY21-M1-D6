@@ -290,6 +290,29 @@ const testExercise11 = ( testing ) => {
 
     console.log( testing( movie, "Title") ); // 
 }
+/* Ex.12 
+    Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
+*/
+
+const olderMovie = ( listOfMovies,  ) => {
+    listOfMovies.sort(function(a, b){return a.Year - b.Year});
+    return listOfMovies[0].Title
+}
+
+const testExercise12 = ( testing ) => {
+
+    console.log( testing( movies) ); // => Lord of the Flies
+}
+/* Ex.13
+    Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
+*/
+
+const countMovies = ( movies ) => movies.length
+
+const testExercise13 = ( testing ) => {
+
+    console.log( testing( movies) ); // => Lord of the Flies
+}
 
 const testAllExercise = () => {
     /**
@@ -310,8 +333,10 @@ const testAllExercise = () => {
         testExercise8(rollTheDices) 
         testExercise9(howManyDays)
         testExercise10(isTodayMyBirthday)
+        testExercise11(deleteProp)
+        testExercise12(olderMovie)
     */
-    testExercise11(deleteProp)
+    testExercise13(countMovies)
 };
 
 testAllExercise()
