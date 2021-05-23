@@ -429,17 +429,55 @@ const removeIndex = ( movies, number ) => {
     let moviesLength = movies.length
 
     for (let i=0; i< moviesLength; i++) {
-        if( i !== number)
-            match.push(movies[i])
+        if( i === number)
+            match.push(movies[i].Title)
     }
     return match
 }
 
 const testExercise20 = ( testing ) => {
-console.log("---------------------------------");
-    console.log( testing( movies, 0 ) ); // => 
     console.log( testing( movies, 1 ) ); // => 
-    console.log( testing( movies, 2 ) ); // => 
+    // console.log( testing( movies, 2 ) ); // => 
+    // console.log( testing( movies, make a mistake ) ); // => 
+}
+// [EXTRAS] JS Advanced
+
+/* Ex.21
+  Create a function called "halfTree" which receives a number as a parameter and builds an "*" half tree with the given height.
+  Example:
+  halfTree(3)
+  *
+  **
+  ***
+*/
+// [EXTRAS] JS Advanced
+
+const halfTree = ( number ) => {
+    let stars = ""
+    let star = "*"
+    let addStars = "*\n"
+    
+    if( number < 1) 
+        return "You need to input a number"
+    else {
+        for (let i = 0; i < number; i++) {
+            for (let j = 0; j <= i-1; j++) {
+                stars += star
+            }
+            stars += addStars
+        }
+    }
+    return stars
+}
+
+const testExercise21 = ( testing ) => {
+console.log("\n----------------< TEST ex: 21>-----------------\n");
+    console.log( testing( 0 ) ); // =>  
+    console.log( testing( 1 ) ); // =>  
+    console.log( testing( 2 ) ); // =>  
+    console.log( testing( 3 ) ); // =>  
+    console.log( testing( 4 ) ); // =>  
+    console.log( testing( 5 ) ); // =>  
 }
 
 const testAllExercise = () => {
@@ -470,8 +508,9 @@ const testAllExercise = () => {
         testExercise17(sumAllTheYears)
         testExercise18(searchByTitle)
         testExercise19(searchAndDivide)
+        testExercise20(removeIndex)
     */
-    testExercise20(removeIndex)
+    testExercise21(halfTree)
 };
 
 testAllExercise()
