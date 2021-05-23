@@ -480,6 +480,47 @@ console.log("\n----------------< TEST ex: 21>-----------------\n");
     console.log( testing( 5 ) ); // =>  
 }
 
+/* Ex.22 
+  Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
+  Example: 
+  tree(3)
+    *  
+   *** 
+  *****
+*/
+
+const tree = ( number ) => {
+    let stars = ""
+    let star = "*"
+    let empty = " "
+    let addStars = "*\n"
+    
+    if( number < 1) 
+        return "You need to input a number"
+    else {
+        for (let i = 0; i < number; i++) {
+            for (let k=i; number >= k; k++) {
+                stars += empty 
+            }
+            for (let j = 0; j <= i-1; j++) {
+                stars += star + star
+            }
+            stars += addStars
+        }
+    }
+    return stars
+}
+
+const testExercise22 = ( testing ) => {
+console.log("\n----------------< TEST ex: 22>-----------------\n");
+    console.log( testing( 0 ) ); // =>  
+    console.log( testing( 1 ) ); // =>  
+    console.log( testing( 2 ) ); // =>  
+    console.log( testing( 3 ) ); // =>  
+    console.log( testing( 4 ) ); // =>  
+    console.log( testing( 5 ) ); // =>  
+}
+
 const testAllExercise = () => {
     /**
         testExerciseA()
@@ -509,8 +550,9 @@ const testAllExercise = () => {
         testExercise18(searchByTitle)
         testExercise19(searchAndDivide)
         testExercise20(removeIndex)
+        testExercise21(halfTree)
     */
-    testExercise21(halfTree)
+    testExercise22(tree)
 };
 
 testAllExercise()
