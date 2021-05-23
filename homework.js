@@ -360,6 +360,22 @@ const testExercise16 = ( testing ) => {
     console.log( testing( "tt1731697" ) ); // => The Lords of Salem
     console.log( testing( "tt0167261" ) ); // => The Lord of the Rings: The Two Towers
 }
+/* Ex.17
+    Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
+*/
+
+const sumAllTheYears = ( movies ) => {
+    sum = 0
+    for (const movie of movies) {
+        sum +=  parseInt(movie.Year)
+    }
+    return sum
+}
+
+const testExercise17 = ( testing ) => {
+
+    console.log( testing( movies ) ); // => 
+}
 
 const testAllExercise = () => {
     /**
@@ -385,8 +401,9 @@ const testAllExercise = () => {
         testExercise13(countMovies)
         testExercise14(onlyTheTitles)
         testExercise15(onlyInThisMillennium)
+        testExercise16(getMovieById)
     */
-    testExercise16(getMovieById)
+    testExercise17(sumAllTheYears)
 };
 
 testAllExercise()
