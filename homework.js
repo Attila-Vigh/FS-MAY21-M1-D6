@@ -395,6 +395,31 @@ const testExercise18 = ( testing ) => {
     console.log( testing( "Tarzan" ) ); // => 
     console.log( testing( "Dogtown" ) ); // => 
 }
+    
+/* Ex.19
+    Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
+    this object should contain an array called "match", made by all the movies which contain the given string in the title,
+    and another array "unmatch" with all the remaining ones.
+*/
+
+const searchAndDivide = ( string ) => {
+    const match = []
+    const unmatch = []
+    for (const movie of movies) {
+        if(movie.Title.includes(string))
+            match.push(movie)
+        else
+            unmatch.push(movie)
+    }
+    return { match, unmatch}
+}
+
+const testExercise19 = ( testing ) => {
+
+    console.log( testing( "Lord" ) ); // => 
+    console.log( testing( "Tarzan" ) ); // => 
+    console.log( testing( "Dogtown" ) ); // => 
+}
 
 const testAllExercise = () => {
     /**
@@ -422,8 +447,9 @@ const testAllExercise = () => {
         testExercise15(onlyInThisMillennium)
         testExercise16(getMovieById)
         testExercise17(sumAllTheYears)
+        testExercise18(searchByTitle)
     */
-    testExercise18(searchByTitle)
+    testExercise18(searchAndDivide)
 };
 
 testAllExercise()
