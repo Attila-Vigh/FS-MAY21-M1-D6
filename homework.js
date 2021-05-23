@@ -328,6 +328,20 @@ const testExercise14 = ( testing ) => {
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
+/* Ex.15
+   Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
+*/
+const onlyInThisMillennium = ( movies ) => {
+    const onlyInThisMillennium = []
+    for (const movie of movies) {
+        if( movie.Year >= 2000)
+            onlyInThisMillennium.push(movie)
+    }
+}
+
+
+    console.log( testing( movies) ); // => Lord of the Flies
+}
 
 const testAllExercise = () => {
     /**
@@ -351,8 +365,9 @@ const testAllExercise = () => {
         testExercise11(deleteProp)
         testExercise12(olderMovie)
         testExercise13(countMovies)
+        testExercise14(onlyTheTitles)
     */
-    testExercise14(onlyTheTitles)
+    testExercise15(onlyInThisMillennium)
 };
 
 testAllExercise()
