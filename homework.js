@@ -134,6 +134,28 @@ const testExercise4 = ( testing ) => {
     console.log( testing("I love coding", true) ); // =>
     console.log( testing("I am from faraway", false) ); // =>
 }
+/* Ex.5
+   Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
+   Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
+*/
+
+const onlyLetters = ( string ) =>  {
+    
+    let newString =""
+    let letter
+    
+    for (letter of string)
+        if(!letter.match(/[0-9]/g)) 
+            newString += letter
+    
+    return newString
+};
+
+const testExercise5 = ( testing ) => {
+
+    console.log( testing("4 kids are playing 4 games coding") ); // =>
+    console.log( testing("I have 4 dogs") ); // =>
+}
 const testAllExercise = () => {
     /**
         testExerciseA()
@@ -147,8 +169,9 @@ const testAllExercise = () => {
         testExercise2(whoIsBiggerInsideString) 
         testExercise2(whoIsBigger) 
         testExercise3(splitMe) 
-        */
-       testExercise4(deleteOne) 
+        testExercise4(deleteOne) 
+    */
+    testExercise5(onlyLetters) 
 };
 
 
