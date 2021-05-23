@@ -9,6 +9,8 @@ const movies = require('./data/movies');
 let test = "First test"
 
 const testExerciseA = () => {
+    console.log("\n----------------< TEST ex: A >-----------------\n");
+    
     console.log(test);
 }
 
@@ -19,6 +21,8 @@ const testExerciseA = () => {
 let sum = 10 + 20
 
 const testExerciseB = () => {
+    console.log("\n----------------< TEST ex: B >-----------------\n");
+
     console.log("sum:", sum); // => 30
 }
 
@@ -29,6 +33,8 @@ const testExerciseB = () => {
 let random =  Math.floor(Math.random() * 20)
 
 const testExerciseC = () => {
+    console.log("\n----------------< TEST ex: C >-----------------\n");
+
     console.log("random:", random); // =>
 }
 
@@ -44,6 +50,8 @@ let me =
 }
 
 const testExerciseD = () => {
+    console.log("\n----------------< TEST ex:  >-----------------\n");
+
     console.log("me:", me); // =>
 }
 
@@ -54,6 +62,8 @@ const testExerciseD = () => {
 delete me.age
 
 const testExerciseE = () => {
+    console.log("\n----------------< TEST ex: E >-----------------\n");
+
     console.log("me:", me); // =>
 }
 /* Ex.F 
@@ -69,6 +79,8 @@ me.skills =
     ]
 
 const testExerciseF = () => {
+    console.log("\n----------------< TEST ex: F >-----------------\n");
+
     console.log("me:", me); // =>
 }
 /* Ex.G 
@@ -78,6 +90,8 @@ const testExerciseF = () => {
 me.skills.pop()
 
 const testExerciseG = () => {
+    console.log("\n----------------< TEST ex: G >-----------------\n");
+
     console.log("me:", me); // =>
 }
 
@@ -89,6 +103,8 @@ const testExerciseG = () => {
 const dice = () => Math.floor(Math.random() * 5) + 1;
 
 const testExercise1 = () => {
+    console.log("\n----------------< TEST ex: 1 >-----------------\n");
+
     console.log("dice:", dice()); // =>
 }
 /* Ex.2 
@@ -99,6 +115,8 @@ const whoIsBiggerInsideString = (a,b) => a>b ? `${a} is bigger than ${b}` : b>a 
 const whoIsBigger             = (a,b) => a>b ? a : b>a ? b : `${a} and ${b} are equal.`
 
 const testExercise2 = (testing) => {
+    console.log("\n----------------< TEST ex: 2 >-----------------\n");
+
     console.log("whoIsBigger:", testing(2, 1)); // =>
     console.log("whoIsBigger:", testing(1, 2)); // =>
     console.log("whoIsBigger:", testing(0, 2)); // =>
@@ -118,6 +136,8 @@ const testExercise2 = (testing) => {
 const splitMe = ( string ) => string.split(" ")
 
 const testExercise3 = (testing) => {
+    console.log("\n----------------< TEST ex: 3 >-----------------\n");
+
 
     console.log( testing("I love coding") ); // =>
     console.log( testing("I am from faraway.") ); // =>
@@ -130,6 +150,8 @@ const testExercise3 = (testing) => {
 const deleteOne = ( string, bool ) =>  bool === true ? string.slice(1) : string.substr(0, string.length - 1) ;
 
 const testExercise4 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 4 >-----------------\n");
+
 
     console.log( testing("I love coding", true) ); // =>
     console.log( testing("I am from faraway", false) ); // =>
@@ -152,6 +174,8 @@ const onlyLetters = ( string ) =>  {
 };
 
 const testExercise5 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 5 >-----------------\n");
+
 
     console.log( testing("4 kids are playing 4 games coding") ); // =>
     console.log( testing("I have 4 dogs") ); // =>
@@ -163,6 +187,8 @@ const testExercise5 = ( testing ) => {
 const isThisAnEmail = ( string ) =>  string.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) ? true : false
 
 const testExercise6 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 6 >-----------------\n");
+
     
     console.log( testing("this.is@anemail.com") ); // =>
     console.log( testing("I have 4 dogs") ); // =>
@@ -186,6 +212,8 @@ const whatDayIsIt = ( ) => {
 }
 
 const testExercise7 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 7 >-----------------\n");
+
 
     console.log( testing() ); // =>
 }
@@ -213,6 +241,8 @@ const rollTheDices = ( numbers ) => {
 }
 
 const testExercise8 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 8 >-----------------\n");
+
 
     console.log( testing(1) ); // =>
     console.log( testing(2) ); // =>
@@ -236,6 +266,8 @@ const howManyDays = ( date, month, year ) => {
 }
 
 const testExercise9 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 9 >-----------------\n");
+
     let d = new Date()
     console.log( testing( d.getDate(), d.getMonth() + 1 , d.getFullYear() ) ); // =>
     console.log( testing( 24, 5, 2021 ) ); // =>
@@ -256,6 +288,8 @@ const isTodayMyBirthday = ( date, month, year ) => {
 }
 
 const testExercise10 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 10 >-----------------\n");
+
 
     let d = new Date()
     console.log( testing( d.getDate(), d.getMonth() + 1 ) ); // => true
@@ -287,6 +321,8 @@ const deleteProp = ( object, property ) => {
 }
 
 const testExercise11 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 11 >-----------------\n");
+
 
     console.log( testing( movie, "Title") ); // 
 }
@@ -300,6 +336,8 @@ const olderMovie = ( listOfMovies,  ) => {
 }
 
 const testExercise12 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 12 >-----------------\n");
+
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
@@ -310,6 +348,8 @@ const testExercise12 = ( testing ) => {
 const countMovies = ( movies ) => movies.length
 
 const testExercise13 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 13 >-----------------\n");
+
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
@@ -325,6 +365,8 @@ const onlyTheTitles = ( movies ) => {
 }
 
 const testExercise14 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 14 >-----------------\n");
+
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
@@ -341,6 +383,8 @@ const onlyInThisMillennium = ( movies ) => {
 }
 
 const testExercise15 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 15 >-----------------\n");
+
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
@@ -355,6 +399,8 @@ const getMovieById = ( id ) => {
 }
 
 const testExercise16 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 16 >-----------------\n");
+
 
     console.log( testing( "tt4154796" ) ); // => Avengers: Endgame
     console.log( testing( "tt1731697" ) ); // => The Lords of Salem
@@ -373,6 +419,8 @@ const sumAllTheYears = ( movies ) => {
 }
 
 const testExercise17 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 17 >-----------------\n");
+
 
     console.log( testing( movies ) ); // => 
 }
@@ -390,6 +438,8 @@ const searchByTitle = ( string ) => {
 }
 
 const testExercise18 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 18 >-----------------\n");
+
 
     console.log( testing( "Lord" ) ); // => 
     console.log( testing( "Tarzan" ) ); // => 
@@ -415,6 +465,8 @@ const searchAndDivide = ( string ) => {
 }
 
 const testExercise19 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 19 >-----------------\n");
+
 
     console.log( testing( "Lord" ) ); // => 
     console.log( testing( "Tarzan" ) ); // => 
@@ -436,6 +488,8 @@ const removeIndex = ( movies, number ) => {
 }
 
 const testExercise20 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 20>-----------------\n");
+
     console.log( testing( movies, 1 ) ); // => 
     // console.log( testing( movies, 2 ) ); // => 
     // console.log( testing( movies, make a mistake ) ); // => 
@@ -471,7 +525,8 @@ const halfTree = ( number ) => {
 }
 
 const testExercise21 = ( testing ) => {
-console.log("\n----------------< TEST ex: 21>-----------------\n");
+    console.log("\n----------------< TEST ex: 21>-----------------\n");
+
     console.log( testing( 0 ) ); // =>  
     console.log( testing( 1 ) ); // =>  
     console.log( testing( 2 ) ); // =>  
@@ -512,7 +567,8 @@ const tree = ( number ) => {
 }
 
 const testExercise22 = ( testing ) => {
-console.log("\n----------------< TEST ex: 22>-----------------\n");
+    console.log("\n----------------< TEST ex: 22>-----------------\n");
+
     console.log( testing( 0 ) ); // =>  
     console.log( testing( 1 ) ); // =>  
     console.log( testing( 2 ) ); // =>  
@@ -520,9 +576,42 @@ console.log("\n----------------< TEST ex: 22>-----------------\n");
     console.log( testing( 4 ) ); // =>  
     console.log( testing( 5 ) ); // =>  
 }
+/* Ex.23
+  Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
+*/
+
+const isItPrime = ( number ) => {
+
+    for(var i = 2; i < number; i++)
+        if(number % i === 0) 
+            return false;
+    
+    return number > 1;
+}
+
+const testExercise23 = ( testing ) => {
+    console.log("\n----------------< TEST ex: 23>-----------------\n");
+
+    console.log( "is prime 0,   true ===", testing( 0 ) ); // =>  
+    console.log( "is prime 1,   true ===", testing( 1 ) ); // =>  
+    console.log( "is prime 2,   true ===", testing( 2 ) ); // =>  
+    console.log( "is prime 3,   true ===", testing( 3 ) ); // =>  
+    console.log( "is prime 4,   false ===", testing( 4 ) ); // =>  
+    console.log( "is prime 5,   true ===", testing( 5 ) ); // =>  
+    console.log( "is prime 7,   true ===", testing( 7 ) ); // =>  
+    console.log( "is prime 9,   false ===", testing( 9 ) ); // =>  
+    console.log( "is prime 13,  true ===", testing( 13 ) ); // =>  
+    console.log( "is prime 21,  false ===", testing( 21 ) ); // =>  
+    console.log( "is prime 107, true ===", testing( 107 ) ); // =>  
+    console.log( "is prime 255, false ===", testing( 255 ) ); // =>  
+    console.log( "is prime 23,  true ===", testing( 23 ) ); // =>  
+    console.log( "is prime 113, true ===", testing( 113 ) ); // =>  
+    console.log( "is prime 117, false ===", testing( 117) ); // =>  
+    console.log( "is prime 127, true ===", testing( 127 ) ); // =>  
+}
 
 const testAllExercise = () => {
-    /**
+   /**
         testExerciseA()
         testExerciseB()
         testExerciseC()
@@ -551,8 +640,9 @@ const testAllExercise = () => {
         testExercise19(searchAndDivide)
         testExercise20(removeIndex)
         testExercise21(halfTree)
+        testExercise22(tree)
     */
-    testExercise22(tree)
+    testExercise23(isItPrime)
 };
 
 testAllExercise()
