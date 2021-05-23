@@ -232,7 +232,6 @@ const whatDayIsIt = ( ) => {
 const testExercise7 = ( testing ) => {
     console.log("\n----------------< TEST ex: 7 >-----------------\n");
 
-
     console.log( testing() ); // =>
 }
 // testExercise7(whatDayIsIt) 
@@ -294,7 +293,6 @@ const testExercise9 = ( testing ) => {
     console.log( testing( 24, 5, 2021 ) ); // =>
     console.log( testing( 23, 5, 2021 ) ); // =>
     console.log( testing( 23, 6, 2020 ) ); // =>
-
 }
 // testExercise9(howManyDays)
 
@@ -311,7 +309,6 @@ const isTodayMyBirthday = ( date, month, year ) => {
 }
 const testExercise10 = ( testing ) => {
     console.log("\n----------------< TEST ex: 10 >-----------------\n");
-
 
     let d = new Date()
     console.log( testing( d.getDate(), d.getMonth() + 1 ) ); // => true
@@ -348,7 +345,7 @@ const testExercise11 = ( testing ) => {
 
     console.log( testing( movie, "Title") ); // 
 }
-testExercise11(deleteProp)
+// testExercise11(deleteProp)
 
 /* Ex.12 
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
@@ -362,7 +359,6 @@ const olderMovie = ( listOfMovies,  ) => {
 const testExercise12 = ( testing ) => {
     console.log("\n----------------< TEST ex: 12 >-----------------\n");
 
-
     console.log( testing( movies) ); // => Lord of the Flies
 }
 // testExercise12(olderMovie)
@@ -375,7 +371,6 @@ const countMovies = ( movies ) => movies.length
 
 const testExercise13 = ( testing ) => {
     console.log("\n----------------< TEST ex: 13 >-----------------\n");
-
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
@@ -394,7 +389,6 @@ const onlyTheTitles = ( movies ) => {
 
 const testExercise14 = ( testing ) => {
     console.log("\n----------------< TEST ex: 14 >-----------------\n");
-
 
     console.log( testing( movies) ); // => Lord of the Flies
 }
@@ -415,7 +409,6 @@ const onlyInThisMillennium = ( movies ) => {
 const testExercise15 = ( testing ) => {
     console.log("\n----------------< TEST ex: 15 >-----------------\n");
 
-
     console.log( testing( movies) ); // => Lord of the Flies
 }
 // testExercise15(onlyInThisMillennium)
@@ -432,7 +425,6 @@ const getMovieById = ( id ) => {
 
 const testExercise16 = ( testing ) => {
     console.log("\n----------------< TEST ex: 16 >-----------------\n");
-
 
     console.log( testing( "tt4154796" ) ); // => Avengers: Endgame
     console.log( testing( "tt1731697" ) ); // => The Lords of Salem
@@ -455,7 +447,6 @@ const sumAllTheYears = ( movies ) => {
 const testExercise17 = ( testing ) => {
     console.log("\n----------------< TEST ex: 17 >-----------------\n");
 
-
     console.log( testing( movies ) ); // => 
 }
 // testExercise17(sumAllTheYears)
@@ -476,13 +467,12 @@ const searchByTitle = ( string ) => {
 const testExercise18 = ( testing ) => {
     console.log("\n----------------< TEST ex: 18 >-----------------\n");
 
-
     console.log( testing( "Lord" ) ); // => 
     console.log( testing( "Tarzan" ) ); // => 
     console.log( testing( "Dogtown" ) ); // => 
 }
 
-//  testExercise18(searchByTitle)
+// testExercise18(searchByTitle)
 
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
@@ -505,7 +495,6 @@ const searchAndDivide = ( string ) => {
 const testExercise19 = ( testing ) => {
     console.log("\n----------------< TEST ex: 19 >-----------------\n");
 
-
     console.log( testing( "Lord" ) ); // => 
     console.log( testing( "Tarzan" ) ); // => 
     console.log( testing( "Dogtown" ) ); // => 
@@ -521,8 +510,8 @@ const removeIndex = ( movies, number ) => {
     let moviesLength = movies.length
 
     for (let i=0; i< moviesLength; i++) {
-        if( i === number)
-            match.push(movies[i].Title)
+        if( i !== number)
+            match.push(movies[i])
     }
     return match
 }
@@ -534,7 +523,7 @@ const testExercise20 = ( testing ) => {
     // console.log( testing( movies, 2 ) ); // => 
     // console.log( testing( movies, make a mistake ) ); // => 
 }
-// testExercise20(removeIndex)
+testExercise20(removeIndex)
 
 
 // [EXTRAS] JS Advanced
