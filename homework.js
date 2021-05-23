@@ -221,6 +221,29 @@ const testExercise8 = ( testing ) => {
     console.log( testing(5) ); // =>
     console.log( testing(6) ); // =>
 }
+/* Ex.9
+   Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
+*/
+
+const howManyDays = ( date, month, year ) => {
+
+    let yourDate = new Date(year, month -1 , date).getTime();
+    let today    = new Date().getTime();
+
+    let daysPast = (today - yourDate)/(1000*3600*24);
+    
+    return Math.floor(daysPast,4)
+}
+
+const testExercise9 = ( testing ) => {
+    let d = new Date()
+    console.log( testing( d.getDate(), d.getMonth() + 1 , d.getFullYear() ) ); // =>
+    console.log( testing( 24, 5, 2021 ) ); // =>
+    console.log( testing( 23, 5, 2021 ) ); // =>
+    console.log( testing( 23, 6, 2020 ) ); // =>
+
+}
+
 const testAllExercise = () => {
     /**
         testExerciseA()
@@ -237,8 +260,9 @@ const testAllExercise = () => {
         testExercise4(deleteOne) 
         testExercise5(onlyLetters) 
         testExercise7(whatDayIsIt) 
+        testExercise8(rollTheDices) 
     */
-    testExercise8(rollTheDices) 
+    testExercise9(howManyDays)
 };
 
 testAllExercise()
