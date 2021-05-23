@@ -356,7 +356,7 @@ testExercise11(deleteProp)
 
 const olderMovie = ( listOfMovies,  ) => {
     listOfMovies.sort(function(a, b){return a.Year - b.Year});
-    return listOfMovies[0].Title
+    return listOfMovies[0]
 }
 
 const testExercise12 = ( testing ) => {
