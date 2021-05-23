@@ -156,6 +156,17 @@ const testExercise5 = ( testing ) => {
     console.log( testing("4 kids are playing 4 games coding") ); // =>
     console.log( testing("I have 4 dogs") ); // =>
 }
+/* Ex.6 
+   Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
+*/
+
+const isThisAnEmail = ( string ) =>  string.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) ? true : false
+
+const testExercise6 = ( testing ) => {
+
+    console.log( testing("this.is@anemail.com") ); // =>
+    console.log( testing("I have 4 dogs") ); // =>
+}
 const testAllExercise = () => {
     /**
         testExerciseA()
@@ -170,8 +181,9 @@ const testAllExercise = () => {
         testExercise2(whoIsBigger) 
         testExercise3(splitMe) 
         testExercise4(deleteOne) 
+        testExercise5(onlyLetters) 
     */
-    testExercise5(onlyLetters) 
+    testExercise6(isThisAnEmail) 
 };
 
 
