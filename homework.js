@@ -168,7 +168,7 @@ const testExercise6 = ( testing ) => {
     console.log( testing("I have 4 dogs") ); // =>
 }
 /* Ex.7
-Write a function called "whatDayIsIt" that should return the current day of the week.
+    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
 
 const whatDayIsIt = ( ) => {
@@ -189,6 +189,38 @@ const testExercise7 = ( testing ) => {
 
     console.log( testing() ); // =>
 }
+/* Ex.8
+    Write a function called "rollTheDices" which receives a number as a parameter.
+    It should invoke the dice() function defined in Ex1 the specified amount of times,
+    and return an object containing a "sum" property holding the sum of all values extracted
+    and a "values" array containing the single values of the dicerolls themselves.
+    Example: RollTheDices(3) => returns {
+        sum: 10
+        values: [3, 3, 4]
+    }
+*/
+
+const rollTheDices = ( numbers ) => {
+    
+    let values = []
+    let sum = 0
+    for(let i=0; i < numbers; i++){
+        let roll = dice()
+        values.push(roll)
+        sum += roll
+    }
+    return {sum, values}
+}
+
+const testExercise8 = ( testing ) => {
+
+    console.log( testing(1) ); // =>
+    console.log( testing(2) ); // =>
+    console.log( testing(3) ); // =>
+    console.log( testing(4) ); // =>
+    console.log( testing(5) ); // =>
+    console.log( testing(6) ); // =>
+}
 const testAllExercise = () => {
     /**
         testExerciseA()
@@ -204,8 +236,9 @@ const testAllExercise = () => {
         testExercise3(splitMe) 
         testExercise4(deleteOne) 
         testExercise5(onlyLetters) 
+        testExercise7(whatDayIsIt) 
     */
-    testExercise7(whatDayIsIt) 
+    testExercise8(rollTheDices) 
 };
 
 testAllExercise()
