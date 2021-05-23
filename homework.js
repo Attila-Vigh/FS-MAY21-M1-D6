@@ -376,6 +376,25 @@ const testExercise17 = ( testing ) => {
 
     console.log( testing( movies ) ); // => 
 }
+/* Ex.18
+    Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the  title.
+*/
+
+const searchByTitle = ( string ) => {
+    const newMoives = []
+    for (const movie of movies) {
+        if(movie.Title.includes(string))
+            newMoives.push(movie)
+    }
+    return newMoives
+}
+
+const testExercise18 = ( testing ) => {
+
+    console.log( testing( "Lord" ) ); // => 
+    console.log( testing( "Tarzan" ) ); // => 
+    console.log( testing( "Dogtown" ) ); // => 
+}
 
 const testAllExercise = () => {
     /**
@@ -402,8 +421,9 @@ const testAllExercise = () => {
         testExercise14(onlyTheTitles)
         testExercise15(onlyInThisMillennium)
         testExercise16(getMovieById)
+        testExercise17(sumAllTheYears)
     */
-    testExercise17(sumAllTheYears)
+    testExercise18(searchByTitle)
 };
 
 testAllExercise()
