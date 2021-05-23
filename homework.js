@@ -337,10 +337,28 @@ const onlyInThisMillennium = ( movies ) => {
         if( movie.Year >= 2000)
             onlyInThisMillennium.push(movie)
     }
+    return onlyInThisMillennium
 }
 
+const testExercise15 = ( testing ) => {
 
     console.log( testing( movies) ); // => Lord of the Flies
+}
+/* Ex.16 
+    Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
+*/
+const getMovieById = ( id ) => {
+    for (const movie of movies) {
+        if( movie.imdbID === id)
+            return movie
+    }
+}
+
+const testExercise16 = ( testing ) => {
+
+    console.log( testing( "tt4154796" ) ); // => Avengers: Endgame
+    console.log( testing( "tt1731697" ) ); // => The Lords of Salem
+    console.log( testing( "tt0167261" ) ); // => The Lord of the Rings: The Two Towers
 }
 
 const testAllExercise = () => {
@@ -366,8 +384,9 @@ const testAllExercise = () => {
         testExercise12(olderMovie)
         testExercise13(countMovies)
         testExercise14(onlyTheTitles)
+        testExercise15(onlyInThisMillennium)
     */
-    testExercise15(onlyInThisMillennium)
+    testExercise16(getMovieById)
 };
 
 testAllExercise()
