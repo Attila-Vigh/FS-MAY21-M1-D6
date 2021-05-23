@@ -420,6 +420,27 @@ const testExercise19 = ( testing ) => {
     console.log( testing( "Tarzan" ) ); // => 
     console.log( testing( "Dogtown" ) ); // => 
 }
+/* Ex.20
+   Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
+*/
+
+const removeIndex = ( movies, number ) => {
+    const match = []
+    let moviesLength = movies.length
+
+    for (let i=0; i< moviesLength; i++) {
+        if( i !== number)
+            match.push(movies[i])
+    }
+    return match
+}
+
+const testExercise20 = ( testing ) => {
+console.log("---------------------------------");
+    console.log( testing( movies, 0 ) ); // => 
+    console.log( testing( movies, 1 ) ); // => 
+    console.log( testing( movies, 2 ) ); // => 
+}
 
 const testAllExercise = () => {
     /**
@@ -448,8 +469,9 @@ const testAllExercise = () => {
         testExercise16(getMovieById)
         testExercise17(sumAllTheYears)
         testExercise18(searchByTitle)
+        testExercise19(searchAndDivide)
     */
-    testExercise18(searchAndDivide)
+    testExercise20(removeIndex)
 };
 
 testAllExercise()
