@@ -163,9 +163,31 @@ const testExercise5 = ( testing ) => {
 const isThisAnEmail = ( string ) =>  string.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) ? true : false
 
 const testExercise6 = ( testing ) => {
-
+    
     console.log( testing("this.is@anemail.com") ); // =>
     console.log( testing("I have 4 dogs") ); // =>
+}
+/* Ex.7
+Write a function called "whatDayIsIt" that should return the current day of the week.
+*/
+
+const whatDayIsIt = ( ) => {
+    var day;
+    switch (new Date().getDay()) {
+        case 0:day = "Sunday";   break;
+        case 1:day = "Monday";   break;
+        case 2:day = "Tuesday";  break;
+        case 3:day = "Wednesday";break;
+        case 4:day = "Thursday"; break;
+        case 5:day = "Friday";   break;
+        case 6:day = "Saturday";
+    }
+    return day
+}
+
+const testExercise7 = ( testing ) => {
+
+    console.log( testing() ); // =>
 }
 const testAllExercise = () => {
     /**
@@ -183,8 +205,7 @@ const testAllExercise = () => {
         testExercise4(deleteOne) 
         testExercise5(onlyLetters) 
     */
-    testExercise6(isThisAnEmail) 
+    testExercise7(whatDayIsIt) 
 };
-
 
 testAllExercise()
